@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class doorclosed : MonoBehaviour
 {
-    [SerializeField] private GameObject doorhinge;
-    private Animator DoorAni;
+    [SerializeField] private GameObject picture;
+    private Animator pictureopen;
     // Start is called before the first frame update
     void Start()
     {
-        DoorAni = doorhinge.GetComponent<Animator>();
+        pictureopen = picture.GetComponent<Animator>();
     }
 
     private void OnTriggerExit(Collider other)
     {
-        DoorAni.SetTrigger("doorclosed");
+        pictureopen.SetTrigger("picturemove");
     }
 }
